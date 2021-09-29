@@ -82,7 +82,7 @@ print("Transition value counts: ", df["Transition"].value_counts())
 
 print("Removing stop gaps and exporting...")
 #Dataframe without transitions and stop gap:
-df.loc[df["Transition"] == 0].drop("Transition").to_csv("validation_list_no_transition.csv")
+df.loc[df["Transition"] == 0].drop("Transition", axis =1).to_csv("validation_list_no_transition.csv")
 del df
 
 
