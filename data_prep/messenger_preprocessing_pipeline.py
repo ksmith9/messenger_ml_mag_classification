@@ -32,13 +32,12 @@ crossing_list = pd.read_csv(
 	parse_dates=["Start_Date", "End_Date"], infer_datetime_format=True
 )
 
-
 # Creating a crossing list from WJS' Magnetopause and Bow Shock crossing list
-MPIcrossings = pd.read_csv(data_directory / Path("MESSENGER") / Path("MagPause_In.txt"), sep = ' ',skipinitialspace = True, index_col = False)
-MPOcrossings = pd.read_csv(data_directory / Path("MESSENGER") / Path("MagPause_Out.txt"), sep = ' ',skipinitialspace = True, index_col = False)
+MPIcrossings = pd.read_csv(data_directory / Path("MagPause_In_Time_Duration__public_version_WeijieSun_20230829.txt"), sep = ' ',skipinitialspace = True, index_col = False)
+MPOcrossings = pd.read_csv(data_directory / Path("MagPause_Out_Time_Duration_public_version_WeijieSun_20230829.txt"), sep = ' ',skipinitialspace = True, index_col = False)
 
-BSIcrossings = pd.read_csv(data_directory / Path("MESSENGER") / Path("Bow_Shock_In.txt"), sep = ' ',skipinitialspace = True, index_col = False)
-BSOcrossings = pd.read_csv(data_directory / Path("MESSENGER") / Path("Bow_Shock_Out.txt"), sep = ' ',skipinitialspace = True, index_col = False)
+BSIcrossings = pd.read_csv(data_directory / Path("Bow_Shock_In_Time_Duration__public_version_WeijieSun_20230829.txt"), sep = ' ',skipinitialspace = True, index_col = False)
+BSOcrossings = pd.read_csv(data_directory / Path("Bow_Shock_Out_Time_Duration_public_version_WeijieSun_20230829.txt"), sep = ' ',skipinitialspace = True, index_col = False)
 
 #Combining and cleaning up files
 cross_list = [MPIcrossings,MPOcrossings, BSIcrossings, BSOcrossings]
