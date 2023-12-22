@@ -8,8 +8,6 @@ from tqdm.notebook import tqdm
 import numpy as np
 from matplotlib.dates import DateFormatter
 
-# Precomputed results
-results = pd.read_csv("2022-12-07-11_50_40test_results.csv")
 
 # Compute and print classification report
 cr = classification_report(results["y_true"], 
